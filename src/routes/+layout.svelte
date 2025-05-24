@@ -15,27 +15,27 @@
 
     @font-face{
         font-family: 'PorscheNext-400';
-        src: url(fonts/PorscheNext-normal-400-100.ttf)
+        src: url('/fonts/PorscheNext-normal-400-100.ttf')
     }
 
     @font-face{
         font-family: 'PorscheNext-600';
-        src: url(fonts/PorscheNext-normal-600-100.ttf)
+        src: url('/fonts/PorscheNext-normal-600-100.ttf')
     }
 
     @font-face{
         font-family: 'PorscheNext-700';
-        src: url(fonts/PorscheNext-normal-700-100.ttf)
+        src: url('/fonts/PorscheNext-normal-700-100.ttf')
     }
 
     @font-face{
         font-family: 'PorscheNextWLa-400';
-        src: url(fonts/PorscheNextWLa-normal-400-100.ttf)
+        src: url('/fonts/PorscheNextWLa-normal-400-100.ttf')
     }
 
     @font-face{
         font-family: 'PorscheNextWLa-700';
-        src: url(fonts/PorscheNextWLa-normal-700-100.ttf)
+        src: url('/fonts/PorscheNextWLa-normal-700-100.ttf')
     }
 
     :root{
