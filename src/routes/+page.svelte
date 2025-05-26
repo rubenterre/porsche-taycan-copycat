@@ -1,6 +1,5 @@
 <script>
-	import Footer from '$lib/components/Footer.svelte';
-	import Header from '$lib/components/Header.svelte';
+
 	import Details from '$lib/components/Details.svelte';
 
 	import { datosCompartidos } from '$lib/stores.js';
@@ -16,7 +15,6 @@
 		}
 </script>
 
-<Header></Header>
 
 	<main class="hero">
 		<section class="hero__container">
@@ -79,7 +77,6 @@
 		
 	</main>
 
-<Footer></Footer>
 
 <style>
 	.hero {
