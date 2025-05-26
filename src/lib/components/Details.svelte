@@ -1,12 +1,32 @@
 <script>
 	import { datosCompartidos } from '$lib/stores.js';
 
-	const datosAlternativa = {
-		aceleracion: '4,8',
-		potenciaKw: '300',
-		potenciaCv: '408',
-		velocidad: '230'
-	};
+   import { CountUp } from 'countup.js';
+
+    const datosAlternativa = {
+        aceleracion: '4,8',
+        potenciaKw: '300',
+        potenciaCv: '408',
+        velocidad: '230'
+    };
+
+    // Acción para animar números
+    function countUp(node, value) {
+        let count;
+        function animate(val) {
+            const num = typeof val === 'string' ? Number(val.replace(',', '.')) : Number(val);
+            count = new CountUp(node, num, { decimalPlaces: val?.includes?.(',') ? 1 : 0, separator: '' });
+            count.start();
+        }
+        animate(value);
+
+        return {
+            update(newValue) {
+                animate(newValue);
+            }
+        };
+    }
+
 </script>
 
 {#if $datosCompartidos}
@@ -15,8 +35,10 @@
 			<div class="details__details">
 				<div class="details__card">
 					<div class="details__numbers">
-						<h1 class="details__h1">{$datosCompartidos.aceleracion}</h1>
-						<p class="details__p--units">S</p>
+<!-- 						<h1 class="details__h1">{$datosCompartidos.aceleracion}</h1>
+ -->						
+						<h1 class="details__h1" use:countUp={$datosCompartidos.aceleracion}></h1>
+ 						<p class="details__p--units">S</p>
 					</div>
 					<p class="details__p">Aceleración 0-100 km/h con Launch Control</p>
 				</div>

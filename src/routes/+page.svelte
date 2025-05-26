@@ -95,8 +95,9 @@
 
 	.hero__logo {
 		position: relative;
-		top: -15vw;
-		left: 50%;
+		top: clamp(-23vw, -15vw, -16vw);
+		/* top: -15vw; */
+				left: 50%;
 		transform: translateX(-50%);
 		width: clamp(250px, 47vw, 680px);
 		z-index: -1;
